@@ -4,9 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 public class RectangleIntersectionTest {
 
-    Rectangle expected;
-    Rectangle r1;
-    Rectangle r2;
+    private Rectangle expected;
+    private Rectangle r1;
+    private Rectangle r2;
 
     @Test
     public void intersectRectangle1() {
@@ -19,7 +19,7 @@ public class RectangleIntersectionTest {
 
     @Test
     public void intersectRectangle2() {
-        expected = new Rectangle(2,2,4,4);
+        expected = new Rectangle(2,2,2,2);
         r1 = new Rectangle(0,0,4,4);
         r2 = new Rectangle(2,2,4,4);
 
@@ -28,7 +28,7 @@ public class RectangleIntersectionTest {
 
     @Test
     public void intersectRectangle3() {
-        expected = new Rectangle(2,2,4,4);
+        expected = new Rectangle(2,2,2,2);
         r1 = new Rectangle(0,0,4,4);
         r2 = new Rectangle(2,2,6,6);
 

@@ -52,7 +52,7 @@ public class GenerateUniformRandomNumbersTest {
         long sum = 0;
         for (Integer i : numbers)
             sum += i;
-        return sum/numbers.size();
+        return ((double)sum)/ (double) numbers.size();
     }
 
 }
