@@ -34,6 +34,22 @@ public class AdvanceThroughArrayTest {
         test(array, possible);
     }
 
+    @Test
+    public void arrayAdvance4() {
+        array = Arrays.asList(3, 3, 1, 0, 2, 0, 1);
+        possible = true;
+
+        test(array, possible);
+    }
+
+    @Test
+    public void arrayAdvance5() {
+        array = Arrays.asList(3, 2, 0, 0, 2, 0, 1);
+        possible = false;
+
+        test(array, possible);
+    }
+
     private void test(List<Integer> array, boolean possible) {
         assertEquals(AdvanceThroughArray.arrayAdvance(array), possible);
     }
