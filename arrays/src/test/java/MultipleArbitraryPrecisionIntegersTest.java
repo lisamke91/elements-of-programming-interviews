@@ -42,4 +42,13 @@ public class MultipleArbitraryPrecisionIntegersTest {
         assertEquals(expected, MultipleArbitraryPrecisionIntegers.multiply(a,b));
     }
 
+    @Test
+    public void multiply4() {
+        expected = Arrays.asList(7, 4, 4, 8);
+        a = Arrays.asList(9, 8);
+        b = Arrays.asList(7, 6);
+
+        test(expected, a, b);
+    }
+
 }
