@@ -49,6 +49,16 @@ public class BaseConversionTest {
         test(expected, input, b1, b2);
     }
 
+    @Test
+    public void baseConversion5() {
+        expected= "1A7";
+        input = "615";
+        b1 = 7;
+        b2 = 13;
+
+        test(expected, input, b1, b2);
+    }
+
     private void test(String expected, String input, int b1, int b2) {
         assertEquals(expected, BaseConversion.baseConversion(input, b1, b2));
     }
