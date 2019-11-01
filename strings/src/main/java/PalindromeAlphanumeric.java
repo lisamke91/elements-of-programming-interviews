@@ -23,7 +23,8 @@ public class PalindromeAlphanumeric {
         StringBuilder stringBuilder = new StringBuilder();
         for(int i = 0; i < input.length(); i++) {
             char currentChar = input.charAt(i);
-            if(currentChar <= 'Z' && currentChar >= 'A') {
+            if((currentChar <= 'Z' && currentChar >= 'A')
+                    || (currentChar >= '0' && currentChar <= '9')) {
                 stringBuilder.append(currentChar);
             }
         }

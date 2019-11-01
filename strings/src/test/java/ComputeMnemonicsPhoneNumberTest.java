@@ -26,11 +26,39 @@ public class ComputeMnemonicsPhoneNumberTest {
         test(expectedResults, phoneNumber);
     }
 
+    @Test
+    public void computeMnemonics3() {
+        phoneNumber = "234";
+        expectedResults = Arrays.asList("ADG");
+
+        test(expectedResults, phoneNumber);
+    }
+
     private void test(List<String> expectedResults, String phoneNumber) {
         List<String> actualResults = ComputeMnemonicsPhoneNumber.computeMnemonics(phoneNumber);
+
+        assertEquals(numberSequences(phoneNumber), actualResults.size());
+
+        //System.out.println(actualResults.toString());
+
         for (String mnemonic : expectedResults) {
             assertTrue(actualResults.contains(mnemonic));
         }
+    }
+
+    private int numberSequences(String s) {
+        int count = 1;
+        for(int i = 0; i < s.length(); i++) {
+            count *= getLetterCount(s.charAt(i));
+        }
+        return count;
+    }
+
+    private int getLetterCount(char c) {
+        if(c == '7'|| c == '9') {
+            return 4;
+        }
+        return 3;
     }
 
 }
