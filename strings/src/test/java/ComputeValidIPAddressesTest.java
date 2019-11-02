@@ -32,6 +32,9 @@ public class ComputeValidIPAddressesTest {
 
     private void test(List<String> expectedToContain, String s) {
         List<String> result = ComputeValidIPAddresses.computeValidIPAddresses(s);
+
+        System.out.println(result.toString());
+
         for (String expected : expectedToContain)
             assertTrue(result.contains(expected));
     }

@@ -32,6 +32,15 @@ public class MergeSortedListsTest {
         test(expected, list1, list2);
     }
 
+    @Test
+    public void mergeLists4() {
+        expected = LinkedListUtil.createLinkedList(1, 1, 2, 2, 3, 3);
+        list1 = LinkedListUtil.createLinkedList(1, 2, 3);
+        list2 = LinkedListUtil.createLinkedList(1, 2, 3);
+
+        test(expected, list1, list2);
+    }
+
     private void test(ListNode<Integer> expected, ListNode<Integer> list1, ListNode<Integer> list2) {
         ListNode<Integer> result = MergeSortedLists.mergeLists(list1, list2);
         LinkedListUtil.assertSameList(expected, result);
