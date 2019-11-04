@@ -14,27 +14,23 @@ public class DeleteKthLastNode {
         ListNode<Integer> endNode = list, nodeToDelete = list;
 
         int index = 0;
-        while(index++ < k && endNode != null) {
+        while(index++ <= k && endNode != null) {
             endNode = endNode.next;
         }
 
         if(endNode != null) {
             if(endNode.next == null) {
-                list = nodeToDelete;
+                list = nodeToDelete.next;
             }
 
             while(endNode != null) {
                 endNode = endNode.next;
-                if(endNode == null && k == 1) {
-                    nodeToDelete.next = null;
-                }
                 nodeToDelete = nodeToDelete.next;
             }
+        }
 
-            if(nodeToDelete != null) {
-                nodeToDelete.data = nodeToDelete.next.data;
-                nodeToDelete.next = nodeToDelete.next.next;
-            }
+        if(index > k) {
+            nodeToDelete.next = nodeToDelete.next.next;
         }
     }
 }

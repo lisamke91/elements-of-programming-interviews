@@ -33,6 +33,16 @@ public class DeleteKthLastNodeTest {
         test(expected, input, k);
     }
 
+    @Test
+    public void deleteNode4() {
+        expected = LinkedListUtil.createLinkedList(1, 3, 4, 5);
+        input = LinkedListUtil.createLinkedList(1, 2, 3, 4, 5);
+        k = 5;
+
+        DeleteKthLastNode.deleteNode(input, k);
+        LinkedListUtil.assertSameList(expected, input);
+    }
+
     private void test(ListNode<Integer> expected, ListNode<Integer> input, int k) {
         input.get(input.length() - k + 1).insertAfter(new ListNode<>(10));
         DeleteKthLastNode.deleteNode(input, k);
