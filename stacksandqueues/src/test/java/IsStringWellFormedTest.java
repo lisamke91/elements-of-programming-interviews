@@ -47,6 +47,15 @@ public class IsStringWellFormedTest {
         test(expected, expression);
     }
 
+    @Test
+    public void isWellFormed6() {
+        expected = false;
+        expression = "))";
+
+        test(expected, expression);
+
+    }
+
     private void test(boolean expected, String expression) {
         assertEquals(expected, IsStringWellFormed.isWellFormed(expression));
     }

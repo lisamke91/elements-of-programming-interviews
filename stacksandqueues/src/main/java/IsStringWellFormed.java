@@ -17,7 +17,7 @@ public class IsStringWellFormed {
             if(isOpenBracket(brackets[index])) {
                 openBrackets.push(brackets[index]);
             } else {
-                isWellFormed = isMatchingBracket(openBrackets.pop(), brackets[index]);
+                isWellFormed = openBrackets.size() > 0 && isMatchingBracket(openBrackets.pop(), brackets[index]);
             }
             index++;
         }
