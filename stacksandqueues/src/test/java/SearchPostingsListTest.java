@@ -33,12 +33,14 @@ public class SearchPostingsListTest {
         expected.next.next.next = new PostingListNode<>(2);
         expected.jump = expected.next.next;
         expected.jump.jump = expected.next.next.next;
+        expected.jump.jump.jump = expected.next;
         input = new PostingListNode<>(-1);
         input.next = new PostingListNode<>(-1);
         input.next.next = new PostingListNode<>(-1);
         input.next.next.next = new PostingListNode<>(-1);
         input.jump = input.next.next;
         input.jump.jump = input.next.next.next;
+        input.jump.jump.jump = input.next;
 
         testRecursive(expected, input);
     }
