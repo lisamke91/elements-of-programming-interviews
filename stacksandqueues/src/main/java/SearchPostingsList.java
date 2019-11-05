@@ -16,6 +16,6 @@ public class SearchPostingsList {
     }
 
     public static void setJumpOrderIterative(PostingListNode<Integer> node) {
-        
+
     }
 }

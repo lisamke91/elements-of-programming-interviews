@@ -9,7 +9,18 @@ public class ComputeBuildingsWithView {
     */
 
     public static Deque<BuildingWithHeight> examineBuildingsWithSunset(Iterator<Integer> sequence) {
+        LinkedList<BuildingWithHeight> resultStack = new LinkedList<>();
+        int index = 0;
 
-        return new LinkedList<>();
+        while(sequence.hasNext()) {
+            int value = sequence.next();
+            while(resultStack.size() > 0 && value > resultStack.peek().height) {
+                resultStack.pop();
+            }
+            resultStack.push(new BuildingWithHeight(index, value));
+            index++;
+        }
+
+        return resultStack;
     }
 }
