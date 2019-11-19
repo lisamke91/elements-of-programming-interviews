@@ -26,8 +26,8 @@ public class MergeSortedTest {
 
     @Test
     public void merge2() throws Exception {
-        expected = Arrays.asList(1,2,3,4,5,6,7);
-        A = Arrays.asList(1,2,3,4,5,null,null);
+        expected = Arrays.asList(1,2,3,3,4,4,5,5,6,7);
+        A = Arrays.asList(1,2,3,4,5,null,null,null,null,null);
         m = 5;
         B = Arrays.asList(3,4,5,6,7);
         n = B.size();
