@@ -34,6 +34,14 @@ public class SearchSortedCyclicTest {
         test(expected, list);
     }
 
+    @Test
+    public void search4() throws Exception {
+        expected = 4;
+        list = Arrays.asList(378,478,550,631,103,203,220,234,279,368);
+
+        test(expected, list);
+    }
+
     public void test(int expected, List<Integer> list) throws Exception {
         assertEquals(expected, SearchSortedCyclic.search(list));
     }
