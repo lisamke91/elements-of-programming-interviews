@@ -61,6 +61,17 @@ public class BinaryTreeUtil {
         return tree;
     }
 
+    public static BinaryTree<Integer> getBST() {
+        BinaryTree<Integer> tree = new BinaryTree<>(4);
+        tree.left = new BinaryTree<>(2);
+        tree.left.left = new BinaryTree<>(1);
+        tree.left.right = new BinaryTree<>(3);
+        tree.right = new BinaryTree<>(6);
+        tree.right.left = new BinaryTree<>(5);
+        tree.right.right = new BinaryTree<>(7);
+        return tree;
+    }
+
 
     public static BinaryTree<Integer> getFigureTenDotOne() {
         BinaryTree<Integer> tree = new BinaryTree<>(314);

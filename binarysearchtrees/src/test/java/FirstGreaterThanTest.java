@@ -19,16 +19,9 @@ public class FirstGreaterThanTest {
 
     @Test
     public void find2() throws Exception {
-        tree = BinaryTreeUtil.getFigureFifteenDotOne();
-        expected = tree.right.left.right.left;
-        k = 23;
-
-        test(expected, tree, k);
-    }
-
-    @Test
-    public void find3() throws Exception {
-        tree = BinaryTreeUtil.getFigureFifteenDotOne();
+        tree = BinaryTreeUtil.getBST();
+        expected = tree.left;
+        k = 1;
 
         test(expected, tree, k);
     }
